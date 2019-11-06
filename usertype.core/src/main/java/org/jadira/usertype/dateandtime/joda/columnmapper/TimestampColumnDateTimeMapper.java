@@ -39,11 +39,11 @@ public class TimestampColumnDateTimeMapper extends AbstractVersionableTimestampC
 
     public TimestampColumnDateTimeMapper() {
     }
-    
+
     public TimestampColumnDateTimeMapper(DateTimeZone javaZone) {
     	this.javaZone = javaZone;
     }
-    
+
     @Override
     public DateTime fromNonNullString(String s) {
         return new DateTime(s);
@@ -54,7 +54,7 @@ public class TimestampColumnDateTimeMapper extends AbstractVersionableTimestampC
 
         DateTimeZone currentJavaZone = javaZone == null ? ZoneHelper.getDefault() : javaZone;
 
-        DateTime dateTime = DATETIME_FORMATTER.parseDateTime(value.toString());
+        DateTime dateTime = new DateTime(value.getTime());
         return dateTime.withZone(currentJavaZone);
     }
 
@@ -69,12 +69,12 @@ public class TimestampColumnDateTimeMapper extends AbstractVersionableTimestampC
         final Timestamp timestamp = new Timestamp(value.getMillis());
         return timestamp;
     }
-    
+
     @Override
     public void setJavaZone(DateTimeZone javaZone) {
         this.javaZone = javaZone;
     }
-    
+
 	@Override
 	public DateTimeZone parseJavaZone(String zoneString) {
 		return DateTimeZone.forID(zoneString);
