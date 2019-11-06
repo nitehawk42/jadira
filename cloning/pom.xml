@@ -13,7 +13,7 @@
 	<parent>
 		<groupId>org.jadira.framework</groupId>
 		<artifactId>jadira.parent</artifactId>
-		<version>7.0.0-HMS-SNAPSHOT</version>
+		<version>7.0.1-HMS</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 

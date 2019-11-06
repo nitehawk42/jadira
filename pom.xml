@@ -24,7 +24,7 @@
 	<artifactId>jadira.parent</artifactId>
 	<packaging>pom</packaging>
 
-	<version>7.0.0-HMS-SNAPSHOT</version>
+	<version>7.0.1-HMS</version>
 
 	<name>Jadira Framework Parent</name>
 	<description>Hibernate and DDD support including for Joda Time, JSR 310, Joda Money, JSR 354 and other Common Data Types</description>
@@ -78,6 +78,7 @@
 		</license>
 	</licenses>
 
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -94,12 +95,13 @@
   	</scm>
 
   	<distributionManagement>
-  		<!-- See http://maven.apache.org/plugins/maven-site-plugin/examples/site-deploy-to-sourceforge.net.html -->
+  		<!-- See http://maven.apache.org/plugins/maven-site-plugin/examples/site-deploy-to-sourceforge.net.html
   	  	<site>
   	  	  	<id>jadira.sourceforge.net</id>
   	  	  	<url>scp://shell.sourceforge.net/home/project-web/jadira/htdocs</url>
   	  	  	<name>Jadira Maven Site</name>
   	  	</site>
+  	  	 -->
   	  	<!-- Old Sourceforge Repository
 		<repository>
 			<id>jadira.sourceforge.net.m2-repo</id>
@@ -112,6 +114,7 @@
   			<name>Jadira Maven 2 Snapshots Repository</name>
   		</snapshotRepository>
   		-->
+	    <!--
 		<repository>
 			<id>sonatype-nexus-staging</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
@@ -122,6 +125,19 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 			<name>Sonatype Nexus Snapshots</name>
 		</snapshotRepository>
+		-->
+
+	    <!-- HMS Repository -->
+	    <repository>
+		    <id>nexus-private</id>
+		    <name>HMS Repository</name>
+		    <url>https://nexus.hmsinc.com/nexus/content/repositories/hms-repo/</url>
+	    </repository>
+	    <snapshotRepository>
+		    <id>nexus-private</id>
+		    <name>HMS Repository</name>
+		    <url>https://nexus.hmsinc.com/nexus/content/repositories/hms-snapshot-repo/</url>
+	    </snapshotRepository>
   	</distributionManagement>
 
 	<profiles>
