@@ -21,15 +21,15 @@
 	<parent>
 		<groupId>org.jadira.framework</groupId>
 		<artifactId>jadira.parent</artifactId>
-		<version>7.0.0.CR2-SNAPSHOT</version>
+		<version>7.0.0-HMS-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>org.jadira.scanner</groupId>
 	<artifactId>scanner</artifactId>
 	<packaging>jar</packaging>
-	
+
 	<name>Jadira Scanner</name>
 	<description>Java Classpath Scanner Library for Jadira Framework</description>
 
@@ -46,7 +46,7 @@
 	</dependencyManagement>
 
 	<dependencies>
-	
+
 		<!-- Javassist -->
 		<dependency>
 			<groupId>org.javassist</groupId>
@@ -65,26 +65,26 @@
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-servlet_2.5_spec</artifactId>
 		</dependency>
-		
+
 		<!-- Zip Handling -->
 		<dependency>
 			<groupId>de.schlichtherle</groupId>
 			<artifactId>truezip</artifactId>
 		</dependency>
 
-		<!-- Collections Libraries -->		
+		<!-- Collections Libraries -->
 		<dependency>
 			<groupId>net.sourceforge.collections</groupId>
 			<artifactId>collections-generic</artifactId>
 		</dependency>
-		
+
 		<!-- Parallel programming -->
 		<dependency>
 		    <groupId>org.codehaus.jsr166-mirror</groupId>
 		    <artifactId>jsr166y</artifactId>
 		    <version>1.7.0</version>
 		</dependency>
-		
+
 		<!-- Logging -->
 		<!-- SLF4J -->
 		<dependency>
@@ -104,13 +104,13 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- JUnit -->		
+		<!-- JUnit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>

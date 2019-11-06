@@ -21,10 +21,10 @@
 	<parent>
 		<groupId>org.jadira.framework</groupId>
 		<artifactId>jadira.parent</artifactId>
-		<version>7.0.0.CR2-SNAPSHOT</version>
+		<version>7.0.0-HMS-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.jadira.cdt</groupId>
@@ -33,7 +33,7 @@
 
 	<name>Jadira Common Data Types</name>
 	<description>Common Data Types for Jadira Framework</description>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -45,7 +45,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
