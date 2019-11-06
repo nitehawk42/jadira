@@ -22,11 +22,11 @@ import java.lang.reflect.Method;
 import javax.naming.NamingException;
 import javax.transaction.Status;
 import javax.transaction.Synchronization;
+import javax.transaction.SystemException;
 import javax.transaction.Transaction;
 import javax.transaction.TransactionManager;
 import javax.transaction.xa.XAResource;
 
-import org.omg.CORBA.SystemException;
 import org.springframework.jndi.JndiTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionSystemException;
@@ -264,7 +264,7 @@ public class SpringWebSphereUowTransactionManager extends WebSphereUowTransactio
             }
 
             @Override
-            public void rollback() throws IllegalStateException, SystemException {
+            public void rollback() throws IllegalStateException {
                 throw new UnsupportedOperationException("rollback() is not supported");
             }
 

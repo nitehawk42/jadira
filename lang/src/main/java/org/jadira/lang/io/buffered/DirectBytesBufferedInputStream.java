@@ -15,6 +15,8 @@
  */
 package org.jadira.lang.io.buffered;
 
+import jdk.internal.ref.Cleaner;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
@@ -145,7 +147,7 @@ public class DirectBytesBufferedInputStream extends AbstractBufferedInputStream 
             return;
         }
 
-        sun.misc.Cleaner cleaner = ((sun.nio.ch.DirectBuffer) buf).cleaner();
+        Cleaner cleaner = ((sun.nio.ch.DirectBuffer) buf).cleaner();
 
         if (cleaner != null) {
             cleaner.clean();

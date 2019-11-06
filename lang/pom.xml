@@ -70,8 +70,8 @@
 				<configuration>
 					<toolchains>
 						<jdk>
-							<version>8.0</version>
-							<vendor>oracle</vendor>
+							<version>11.0</version>
+							<vendor>openjdk</vendor>
 						</jdk>
 					</toolchains>
 				</configuration>

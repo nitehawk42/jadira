@@ -24,7 +24,7 @@
 		<version>7.0.0.CR2-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>fmpp-maven-plugin</artifactId>
@@ -106,8 +106,8 @@
 				<configuration>
 					<toolchains>
 						<jdk>
-							<version>8.0</version>
-							<vendor>oracle</vendor>
+							<version>11.0</version>
+							<vendor>openjdk</vendor>
 						</jdk>
 					</toolchains>
 			 	 </configuration>
@@ -122,7 +122,7 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<compilerArgument>-g</compilerArgument>
-					<encoding>${project.build.sourceEncoding}</encoding> 
+					<encoding>${project.build.sourceEncoding}</encoding>
 					<charset>${project.build.sourceEncoding}</charset>
 					<debug>true</debug>
 					<optimize>true</optimize>

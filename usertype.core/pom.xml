@@ -24,7 +24,7 @@
 		<version>7.0.0.CR2-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.jadira.usertype</groupId>
@@ -122,12 +122,12 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time-hibernate</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.jadira.usertype</groupId>
 			<artifactId>usertype.spi</artifactId>
@@ -140,14 +140,14 @@
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.jadira.cdt</groupId>
 			<artifactId>cdt</artifactId>
 			<version>${project.version}</version>
 			<optional>true</optional>
 		</dependency>
-		
+
 		<!-- MySQL -->
 		<dependency>
 	    		<groupId>mysql</groupId>
@@ -155,7 +155,7 @@
 	    		<version>5.1.20</version>
     			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Uncomment for Oracle
 		<dependency>
 			<groupId>com.oracle</groupId>
@@ -164,7 +164,7 @@
 			<scope>test</scope>
 		</dependency>
 		-->
-		
+
 		<!-- Postgres -->
 		<dependency>
 		    <groupId>org.postgresql</groupId>
@@ -172,7 +172,7 @@
 		    <version>9.3-1101-jdbc41</version>
 		    <optional>true</optional>
 		</dependency>
-	
+
 	</dependencies>
 
 	<profiles>
@@ -182,7 +182,7 @@
 				<property>
 					<name>!database</name>
 				</property>
-				<activeByDefault>false</activeByDefault> 
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -217,7 +217,7 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>			
+			</build>
 		</profile>
 		<profile>
 			<id>h2database</id>
@@ -226,7 +226,7 @@
 					<name>database</name>
 					<value>h2database</value>
 				</property>
-				<activeByDefault>false</activeByDefault> 
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -261,7 +261,7 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>			
+			</build>
 		</profile>
 		<profile>
 			<id>mysql</id>
@@ -270,7 +270,7 @@
 					<name>database</name>
 					<value>mysql</value>
 				</property>
-				<activeByDefault>false</activeByDefault> 
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -305,7 +305,7 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>			
+			</build>
 		</profile>
 		<profile>
 			<id>oracle</id>
@@ -314,7 +314,7 @@
 					<name>database</name>
 					<value>oracle</value>
 				</property>
-				<activeByDefault>false</activeByDefault> 
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -349,7 +349,7 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>			
+			</build>
 		</profile>
 		<profile>
 			<id>postgresql</id>
@@ -358,7 +358,7 @@
 					<name>database</name>
 					<value>postgresql</value>
 				</property>
-				<activeByDefault>false</activeByDefault> 
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -393,7 +393,7 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>			
+			</build>
 		</profile>
 		<profile>
 			<id>sqlserver</id>
@@ -402,7 +402,7 @@
 					<name>database</name>
 					<value>sqlserver</value>
 				</property>
-				<activeByDefault>false</activeByDefault> 
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
 				<plugins>
@@ -437,8 +437,8 @@
 						</executions>
 					</plugin>
 				</plugins>
-			</build>			
-		</profile>	
+			</build>
+		</profile>
 	</profiles>
 
 	<build>
@@ -458,8 +458,8 @@
 				<configuration>
 					<toolchains>
 						<jdk>
-							<version>8.0</version>
-							<vendor>oracle</vendor>
+							<version>11.0</version>
+							<vendor>openjdk</vendor>
 						</jdk>
 					</toolchains>
 			 	 </configuration>
@@ -483,5 +483,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

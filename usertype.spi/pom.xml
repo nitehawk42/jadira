@@ -24,7 +24,7 @@
 		<version>7.0.0.CR2-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.jadira.usertype</groupId>
@@ -33,7 +33,7 @@
 
 	<name>Jadira Usertype SPI Classes for Hibernate</name>
 	<description>Shared dependencies for Usertype jars</description>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -45,16 +45,16 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>org.jadira.bindings</groupId>
 			<artifactId>bindings</artifactId>
 			<version>${project.version}</version>
 			<optional>true</optional>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -78,7 +78,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
   			<artifactId>log4j-core</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
   			<artifactId>spring-tx</artifactId>
@@ -94,7 +94,7 @@
   			<artifactId>spring-context</artifactId>
   			<optional>true</optional>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -112,27 +112,27 @@
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<scope>test</scope>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time-hibernate</artifactId>
 		</dependency>
-		
+
 		<dependency>
     		<groupId>javax.enterprise</groupId>
     		<artifactId>cdi-api</artifactId>
     		<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- Required for Javadoc generation -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -150,8 +150,8 @@
 				<configuration>
 					<toolchains>
 						<jdk>
-							<version>8.0</version>
-							<vendor>oracle</vendor>
+							<version>11.0</version>
+							<vendor>openjdk</vendor>
 						</jdk>
 					</toolchains>
 			 	 </configuration>

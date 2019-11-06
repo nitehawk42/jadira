@@ -64,7 +64,7 @@
 			<post>jadira-discuss@lists.sourceforge.net</post>
 		</mailingList>
 	</mailingLists>
-	
+
 	<issueManagement>
 		<system>JIRA</system>
 		<url>https://jadira.atlassian.net/browse/JDF/</url>
@@ -77,22 +77,22 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>       
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<version.weld_core>1.1.5.Final</version.weld_core>
 	</properties>
 
-	<!-- See http://blog.sonatype.com/people/2009/09/maven-tips-and-tricks-using-github/ -->	
+	<!-- See http://blog.sonatype.com/people/2009/09/maven-tips-and-tricks-using-github/ -->
 	<scm>
 	    <connection>scm:git:https://github.com/JadiraOrg/jadira.git</connection>
 	    <url>scm:git:https://github.com/JadiraOrg/jadira.git</url>
 	    <developerConnection>scm:git:https://github.com/JadiraOrg/jadira.git</developerConnection>
 	  <tag>HEAD</tag>
   	</scm>
-  	
+
   	<distributionManagement>
   		<!-- See http://maven.apache.org/plugins/maven-site-plugin/examples/site-deploy-to-sourceforge.net.html -->
   	  	<site>
@@ -105,12 +105,12 @@
 			<id>jadira.sourceforge.net.m2-repo</id>
 			<url>scp://shell.sourceforge.net/home/project-web/jadira/htdocs/m2-repo</url>
 			<name>Jadira Maven 2 Repository</name>
-  		</repository> 
+  		</repository>
   		<snapshotRepository>
   			<id>jadira.sourceforge.net.m2-repo-snapshots</id>
   			<url>scp://shell.sourceforge.net/home/project-web/jadira/htdocs/m2-repo-snapshots</url>
   			<name>Jadira Maven 2 Snapshots Repository</name>
-  		</snapshotRepository> 
+  		</snapshotRepository>
   		-->
 		<repository>
 			<id>sonatype-nexus-staging</id>
@@ -123,7 +123,7 @@
 			<name>Sonatype Nexus Snapshots</name>
 		</snapshotRepository>
   	</distributionManagement>
-	
+
 	<profiles>
 		<profile>
 			<id>release-sign-artifacts</id>
@@ -151,9 +151,9 @@
 					</plugin>
 				</plugins>
 			</build>
-		</profile>		
+		</profile>
 	</profiles>
-	
+
 	<build>
 
 		<defaultGoal>install</defaultGoal>
@@ -165,7 +165,7 @@
 	            <version>2.5</version> <!-- 2.6 does not work -->
 	        </extension>
    		</extensions>
-	
+
 		<resources>
 			<resource>
 				<targetPath>META-INF</targetPath>
@@ -179,7 +179,7 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
-		
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -221,7 +221,7 @@
 								</bannedDependencies>
 								<requirePluginVersions>
 									<banLatest>true</banLatest>
-									<banRelease>true</banRelease>								
+									<banRelease>true</banRelease>
 									<banSnapshots>true</banSnapshots>
 									<unCheckedPluginList>org.codehaus.mojo:sonar-maven-plugin</unCheckedPluginList>
 								</requirePluginVersions>
@@ -245,8 +245,8 @@
 				<configuration>
 					<toolchains>
 						<jdk>
-							<version>8.0</version>
-							<vendor>oracle</vendor>
+							<version>11.0</version>
+							<vendor>openjdk</vendor>
 						</jdk>
 					</toolchains>
 			 	 </configuration>
@@ -264,7 +264,7 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<debug>true</debug>
 					<optimize>true</optimize>
-					<showDeprecation>true</showDeprecation>
+					<showDeprecation>false</showDeprecation>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -304,13 +304,6 @@
 						<!-- <link>http://download.java.net/jdk8/docs/api/</link> -->
 					</links>
 					<encoding>UTF-8</encoding>
-					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-					<docletArtifact>
-						<groupId>org.umlgraph</groupId>
-						<artifactId>umlgraph</artifactId>
-						<version>5.6.6</version>
-					</docletArtifact>
-					<additionalparam>-attributes -enumconstants -enumerations -operations -types -visibility -inferrel -inferdep -hide (java.*)|(org.hibernate.*)|(org.joda.*)|(com.ibm.*)</additionalparam>
 					<sourceFileExcludes>
     					<!--  Not working in 2.9, workaround below
     					<exclude>org/jadira/usertype/spi/jta/SpringWebSphereUowTransactionManager.java</exclude>
@@ -362,12 +355,12 @@
 				<version>2.3.1</version>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId> 
-				<artifactId>maven-resources-plugin</artifactId> 
-				<version>2.6</version> 
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
 				<configuration>
-					<encoding>${project.build.sourceEncoding}</encoding> 
-					<charset>${project.build.sourceEncoding}</charset> 
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<charset>${project.build.sourceEncoding}</charset>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -408,15 +401,15 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId> 
-				<artifactId>cobertura-maven-plugin</artifactId> 
-				<version>2.6</version> 
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.6</version>
 				<configuration>
-					<maxmem>128m</maxmem> 
-					<outputDirectory>${project.reporting.outputDirectory}/cobertura</outputDirectory> 
+					<maxmem>128m</maxmem>
+					<outputDirectory>${project.reporting.outputDirectory}/cobertura</outputDirectory>
 					<formats>
-						<format>html</format> 
-						<format>xml</format> 
+						<format>html</format>
+						<format>xml</format>
 					</formats>
 					<instrumentation>
 						<excludes>
@@ -478,19 +471,6 @@
 								</pluginExecution>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>com.googlecode.fmpp-maven-plugin</groupId>
-										<artifactId>fmpp-maven-plugin</artifactId>
-										<versionRange>[1.0,)</versionRange>
-										<goals>
-											<goal>generate</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
 										<groupId>org.apache.maven.plugins</groupId>
 										<artifactId>maven-antrun-plugin</artifactId>
 										<versionRange>[1.7,)</versionRange>
@@ -526,13 +506,6 @@
 						<!-- <link>http://download.java.net/jdk8/docs/api/</link> -->
 					</links>
 					<encoding>UTF-8</encoding>
-					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-					<docletArtifact>
-						<groupId>org.umlgraph</groupId>
-						<artifactId>umlgraph</artifactId>
-						<version>5.6.6</version>
-					</docletArtifact>
-					<additionalparam>-attributes -enumconstants -enumerations -operations -types -visibility -inferrel -inferdep -hide (java.*)|(org.hibernate.*)|(org.joda.*)|(com.ibm.*)</additionalparam>
 					<sourceFileExcludes>
 						<!--  Not working in 2.9, workaround below
                         <exclude>org/jadira/usertype/spi/jta/SpringWebSphereUowTransactionManager.java</exclude>
@@ -703,11 +676,11 @@
 		<module>scanner</module>
 		<module>cloning</module>
 		<module>bindings</module>
-		<module>cdt</module>		
+		<module>cdt</module>
 		<module>refdata</module>
 		<module>usertype.spi</module>
 		<module>usertype.core</module>
 		<module>quant</module>
 	</modules>
-	
+
 </project>

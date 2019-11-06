@@ -92,8 +92,8 @@
                 <configuration>
                     <toolchains>
                         <jdk>
-                            <version>7.0</version>
-                            <vendor>sun</vendor>
+                            <version>11.0</version>
+                            <vendor>openjdk</vendor>
                         </jdk>
                     </toolchains>
                 </configuration>
@@ -148,7 +148,7 @@
         </plugins>
         <pluginManagement>
             <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven 
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven
                     build itself. -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
